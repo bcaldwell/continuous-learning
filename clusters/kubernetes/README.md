@@ -20,7 +20,7 @@
 - goal is to provide a decoupling between the cluster ops and the layers of the stack 
 
 ## Kubernetes Architecture 
-![](kubernetes-arch.png)
+![](pictures/kubernetes-arch.png)
 
 - api server is stateless
 - etcd provides the storage for configurations
@@ -30,7 +30,7 @@
 	- controller manager
 
 ### Pods
-![](kubernetes-pods.png)
+![](pictures/kubernetes-pods.png)
 
 1. Collection of one or more containers that work well together
 2. Volumes that are data volumes. Life span is independant of the container lifespan
