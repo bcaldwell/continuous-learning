@@ -51,41 +51,89 @@ package main
 import "fmt"
 
 type Person struct {
-	name string
-	age  int
+    name string
+    age  int
 }
 
 func (p *Person) growup_pointer() {
-	p.age = 100
+    p.age = 100
 }
 
 func (p Person) growup_value() {
-	p.age = 100
+    p.age = 100
 }
 
 func main() {
-	p := &Person{"name", 10}
-	fmt.Println(p)
-	p.growup_value()
-	fmt.Print("value: ")
-	fmt.Println(p)
-	p.growup_pointer()
-	fmt.Print("pointer: ")
-	fmt.Println(p)
+    p := Person{"name", 10}
+    fmt.Printf("%+v\n", p)
+    p.growup_value()
+    fmt.Printf("value: %+v\n", p)
+    p.growup_pointer()
+    fmt.Printf("pointer: %+v\n", p)
 }
 ```
 
 ##### Output
 ```
-&{name 10}
-value: &{name 10}
-pointer: &{name 100}
+{name:name age:10}
+value: {name:name age:10}
+pointer: {name:name age:100}
 ```
 
 
 ## Methods on anonymous fields
 
 #### Anonymous fields
+Anonymous fields are fields in a struct that have no variable names
+
+##### Example
+```
+type Child struct {
+	Person
+}
+```
+Doing this allows child to access the member functions of Person. Composed field (ie field that belong to the anonymous field) can also be accessed by its type. Ex `c.Person.age` or `c.age`. Additionaly we need to use the type name when initializing the values of child. Ex `Child{Person{"name", 10}}`. In the case of a name conflict for methods the outer struct is accessible by default. The inner struct can be reference by use the inner struct's type.
+
+#### Anonymous methods
+Methods can also be attached to structs with anonymous methods. Inside these methods the properties of the inner struct can be referenced. 
+
+##### Example
+```
+package main
+
+import "fmt"
+import "time"
+
+type myTime struct {
+    time.Time //anonymous field
+}
+
+func (t myTime) first5Chars() string {
+    return t.String()[0:5]
+}
+
+func (t myTime) first5Chars_2() string {
+    return t.Time.String()[0:5]
+}
+
+func main() {
+    m := myTime{time.Now()}
+    fmt.Println("Full time now:", m.String())
+    fmt.Println("First 5 chars:", m.first5Chars())
+    fmt.Println("First 5 chars:", m.first5Chars_2())
+}
+```
+
+##### Output
+
+```
+Full time now: 2016-07-06 00:17:54.986496857 -0400 EDT
+First 5 chars: 2016-
+First 5 chars: 2016-
+```
+
+- **kind of like inheritance **
+
 
 [source](http://golangtutorials.blogspot.ca/2011/06/methods-on-structs.html)
 [source](https://golang.org/doc/faq#methods_on_values_or_pointers)
