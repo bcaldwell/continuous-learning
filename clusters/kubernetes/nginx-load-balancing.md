@@ -1,0 +1,1 @@
+[source](https://www.nginx.com/blog/load-balancing-kubernetes-services-nginx-plus/)
