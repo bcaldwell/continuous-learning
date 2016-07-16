@@ -27,7 +27,7 @@ func main() {
 ```
 ### Redirect operators
 
-Unix redirect operators `>`/`<` can redirect select file descriptors. For example to only redirect the file descriptor 9 from the pervious
+Unix redirect operators `>`/`<` can redirect select file descriptors. For example to only redirect the file descriptor 9 from the pervious use `9>`
 ```
 go run main.go 9> test.txt
 ```
