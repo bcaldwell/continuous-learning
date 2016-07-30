@@ -1,3 +1,0 @@
-# Security in docker
-
-## 

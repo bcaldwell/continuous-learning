@@ -98,3 +98,26 @@
 
 
 [source](https://www.youtube.com/watch?v=EkNq4TrHP_U)
+
+## Classes
+
+| Class  | Range  |  CIDR | Private Range |
+|---|---|---| --- |
+| A | 1-126 | /8 | 10.0.0.1 - 10.255.255.255 |
+| B | 128-191  | /16 | 172.16.0.0-172.31.255.255 /12 |
+| C |  192.223 |  /24 | 192.168.0.0 - 192.168.255.255 /16 |
+| D | 224-239 | N/A |
+| E | 240-255 | N/A |
+
+- 0 is for universal gateway, default routes (0.0.0.0)
+- 127 is for bind back (localhost)
+- CIDR doesnt relate to the class because of subnets
+- CIDR is number of bits that are "on" (are the network side)
+- private ranges are not routable on the internet (used in NAT)
+- Boardcast and range of /24
+
+| ID | Range | Broadcast (ID + Host count)|
+|---|---|---|
+| X.X.X.16 | 17-30 | X.X.X.31 |
+| X.X.X.32 | 32-46 | X.X.X.47 |
+| X.X.X.48 | 49.62 | X.X.X.63 |
