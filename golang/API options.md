@@ -104,7 +104,7 @@ port := func(p int) func(*Server) {
   }
 }
 
-tls := func(srv *Server {
+tls := func(srv *Server) {
   config := loadTLSConfig()
   srv.listener = tls.NewListener(srv.listener, &config)
 }
