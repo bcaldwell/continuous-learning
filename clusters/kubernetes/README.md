@@ -24,7 +24,7 @@
 
 - api server is stateless
 - etcd provides the storage for configurations
-- small focued binaries
+- small focused binaries
 	- scheduler
 		- assigns pod to nodes
 	- controller manager
@@ -33,7 +33,7 @@
 ![](pictures/kubernetes-pods.png)
 
 1. Collection of one or more containers that work well together
-2. Volumes that are data volumes. Life span is independant of the container lifespan
+2. Volumes that are data volumes. Life span is independent of the container lifespan
 3. Namespaces. ie: network, IPC
 	- can link stuff with localhost. shared network namespace 
 4. Labels: key value pairs for organizing stuff
@@ -64,7 +64,7 @@
 -  gets a dns entry
 -  internal "fake" ip address
 -  ex: frontend can reference backend without knowing where it is
--  each service should have a load balencer at the very edge
+-  each service should have a load balancer at the very edge
 -  has a name, ports and label query
 
 [source](https://www.youtube.com/watch?v=WwBdNXt6wO4)
