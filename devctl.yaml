@@ -1,0 +1,7 @@
+scripts:
+  spell:
+    desc: spell check
+    command: mdspell --en-us -n "**/*.md"
+  spell-report:
+    desc: spell check report
+    command: mdspell --en-us -n -r "**/*.md"

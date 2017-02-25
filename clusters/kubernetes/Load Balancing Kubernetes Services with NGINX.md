@@ -2,10 +2,10 @@
 
 ## Why
 
-- loadbalancer service is limited:
+- load balancer service is limited:
 	- how it works:
-		- creates a loadPort on each node (requests are proxied by kube-proxy
-		- puts cloud load balancer infront with IP address
+		- creates a node port on each node (requests are proxied by kube-proxy
+		- puts cloud load balancer in front with IP address
 		- ![](pictures/cloud_lb.png)
 	- Pros:
 		- easy to set up
@@ -15,7 +15,7 @@
 ## Ingress
 
 - ingress controller (must be deployed) does integration between software and load balancer
-- define HTTP load balancing rule sto route external traffic to your services
+- define HTTP load balancing rule to route external traffic to your services
 	- path-based routing
 	- ssl termination
 	- multiple virtual servers
@@ -55,7 +55,7 @@
 	- easy to use and deploy
 	- configured via kubernetes resources
 - con:
-	- doesnt support adcanced load balancing scenarios
+	- doesnt support advanced load balancing scenarios
 
 ### Nginx ingress controller
 - create nginx ingress service that exposes ports 80,443.
@@ -153,7 +153,7 @@ metadata:
 - ![](pictures/kube-nginx.png)
 - NGINX plus can automatically discover IP address of new pods (scaled service)
 	- works with kubeDNS
-- include `spec.clusterIP: None` in service config so that DNS resolves to all pod IPs not 1 which is load blanced by kube proxy
+- include `spec.clusterIP: None` in service config so that DNS resolves to all pod IPs not 1 which is load balanced by kube proxy
 	- so NGINX can talk to contains and bypass kube-proxy
 - make nginx.conf
 	- set resolver to kube-dns
