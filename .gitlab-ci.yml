@@ -1,0 +1,13 @@
+image: node
+
+before_script:
+  - npm i markdown-spellcheck -g
+
+cache:
+  paths:
+  - /usr/local/lib/node_modules
+  - /usr/local/bin
+
+spell_check:
+  script:
+    - mdspell --en-us -n -r "**/*.md"
