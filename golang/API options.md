@@ -21,7 +21,7 @@ func NewServer(addr string) (*Server, error)
 	- Easy to break code
 	- cumbersome and brittle
 	- API not easily discoverable
-	- unclear which oarameters are optional
+	- unclear which parameters are optional
 	- what is the default value??? 0 vs inf, ect.
 
 ## Many functions
@@ -51,7 +51,7 @@ func NewServer (addr string, config Config)(*Server,error)
 #### Pros
 - configuration struct can grow over time as new options are added which the public api remains constant
 - can lead to better documentation
-	- massive comment block required to desribe NewServer become nicely documented struct
+	- massive comment block required to describe NewServer become nicely documented struct
 - has zero value to represent default value
 
 ####Cons
@@ -69,7 +69,7 @@ NewServer("localhost", &conf)
 #### cons
 - same as configuration struct
 - difference between nil and &config{}
-- shared refference to a config struct
+- shared reference to a config struct
 	- how happens when it changes
 
 ## Optional configuration struct
@@ -82,7 +82,7 @@ NewServer("localhost", &conf)
 ```
 
 #### Pros
-- default dehaviour is as concise as possible
+- default behavior is as concise as possible
 - NewServer doesnt accept a pointer
 
 #### Cons

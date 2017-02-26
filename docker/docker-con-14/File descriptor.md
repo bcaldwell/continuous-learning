@@ -1,6 +1,6 @@
 # File descriptor
 
-In Unix systems, file descriptor (FD, or fildes) is an indicator used to access a file or other input/output resource, such as a pipe or network socket. File descriptors form part of the POSIX application programming interface. A file descriptor is a non-negative integer, usually represent as a type int. Negative numbers are reserved to indicate "no value" or an error condition.
+In Unix systems, file descriptor (FD, or files) is an indicator used to access a file or other input/output resource, such as a pipe or network socket. File descriptors form part of the POSIX application programming interface. A file descriptor is a non-negative integer, usually represent as a type int. Negative numbers are reserved to indicate "no value" or an error condition.
 
 Each Unix process (except perhaps a daemon) should expect to have three standard POSIX file descriptors, corresponding to the three standard streams:
 

@@ -27,7 +27,7 @@
  
  ## Single method interfaces
  - easy to use
- - easy to impliment
+ - easy to implement
 	 - more likely to use
  - simpler = more powerful and useful
 
@@ -90,7 +90,7 @@ type Sizer interface {
 
 
 ## Mocking other people's structs
-- sometimes a libary provides a struct but no interface but we need to mock it in test code
+- sometimes a library provides a struct but no interface but we need to mock it in test code
 - make your own interface which the struct already implements
 ```
 package them

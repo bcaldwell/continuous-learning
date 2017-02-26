@@ -39,7 +39,7 @@
 - json generated from a compose file?
 
 - docker swarm mode is optional
-- backwards compatiable
+- backwards compatible
 
 ## Routing mesh
 - ![routing mesh](pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-25-21.png)
@@ -63,7 +63,7 @@
 	- cryptographic node identity
 	- automatic encryption and mutual auth (TLS)
 	- automatic cert rotation
-	- external CA integrtaion
+	- external CA integration
 
 ## Health checks
 - container health checks in Dockerfile

@@ -23,9 +23,9 @@
 - ![](pictures/7-common-mistakes-in-go-2015-23-638.jpg)
 
 ## Requiring broad interfaces
-- interfaces are composable
+- interfaces are compossible
 	- functions should **only accept** interfaces that require the **methods they need**
-	- functions should not accpet a broad interface when a narrow one would work
+	- functions should not accept a broad interface when a narrow one would work
 	- compose broad interfaces made from narrower ones
 
 ## Methods vs functions
@@ -56,7 +56,7 @@
 	- not safe for concurrent access
 - value receivers
 	- if you want the value copied
-	- if the type is an emtpy struct just use values
+	- if the type is an empty struct just use values
 	- sage for concurrent access
 
 ## Thinking of errors as strings

@@ -5,7 +5,7 @@
     * Monolithic vs Microservices
 2. Process
     * Agile
-    * Continuous delivery/ deploment
+    * Continuous delivery/ deployment
 3. Organization
     * Small, autonomous teams
 

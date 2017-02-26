@@ -36,11 +36,11 @@
 	- dockerfile-javascript
 	- shutIt (python)
 	- **PROS**
-		- powerful abstactions
+		- powerful abstractions
 		- mature language tooling
 	- **CONS**
 		- need to compile down to Dockerfile
-		- Everyone has their favourite language
+		- Everyone has their favorite language
 - without Dockerfile
 	- Docker Image Specification is published
 	- Open container initiative is another image specification
