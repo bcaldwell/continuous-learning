@@ -92,7 +92,7 @@ type Child struct {
 	Person
 }
 ```
-Doing this allows child to access the member functions of Person. Composed field (ie field that belong to the anonymous field) can also be accessed by its type. Ex `c.Person.age` or `c.age`. Additionaly we need to use the type name when initializing the values of child. Ex `Child{Person{"name", 10}}`. In the case of a name conflict for methods the outer struct is accessible by default. The inner struct can be reference by use the inner struct's type.
+Doing this allows child to access the member functions of Person. Composed field (ie field that belong to the anonymous field) can also be accessed by its type. Ex `c.Person.age` or `c.age`. Additionally we need to use the type name when initializing the values of child. Ex `Child{Person{"name", 10}}`. In the case of a name conflict for methods the outer struct is accessible by default. The inner struct can be reference by use the inner struct's type.
 
 #### Anonymous methods
 Methods can also be attached to structs with anonymous methods. Inside these methods the properties of the inner struct can be referenced. 

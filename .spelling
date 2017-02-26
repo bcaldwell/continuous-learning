@@ -111,5 +111,27 @@ newserver
 apis
 teardown
 ad-hoc
+eth0
+inet
+dhcp
+hostname
+ufw
+ubuntu
+wildcards
+osi
+firefox
+plp
+isnt
+webserver
+slp
+rsa
+aes
+cas
+csr
+1xx
+webdav
+2xx
+im
+request-uri
  - clusters/kubernetes/README.md
 aws

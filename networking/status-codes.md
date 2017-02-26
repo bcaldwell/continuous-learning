@@ -30,7 +30,7 @@
 - 305 Use Proxy
 - 306 (Unused)
 - 307 Temporary Redirect
-- 308 Permanent Redirect (experiemental)
+- 308 Permanent Redirect (experimental)
 
 ## 4xx Client Error
 

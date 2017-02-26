@@ -45,11 +45,11 @@
 	- turn on or off the firewall
 - `sudo ufw allow/deny port/protocal`
 	- `sudo ufw allow 80/tcp`
-	- allow or deny certain ports and protocals
+	- allow or deny certain ports and protocols
 - `sudo ufw delete allow/deny port/protocal`
 	- delete rule
 - `sudo ufw allow/deny from ip-address`
-	- allow or deny traffice from an ip address
+	- allow or deny traffics from an ip address
 	- also supports wildcards
 - `sudo ufw allow from 207.80.1.16 to 22`
 	- allow ip access to port

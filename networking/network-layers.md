@@ -12,13 +12,13 @@
 ## Application
 - layer at which user communicate with the systems
 - Example for a website would be firefox
-- *protocal:* ATP 
-- - **Potential Problems:** application is corupted
+- *protocol:* ATP 
+- - **Potential Problems:** application is corrupted
 
 ## Presentation
 - layer is concerned with the format of data exchanged between the end systems
 - layer that the OS is on
-- *protocal:* PLP 
+- *protocol:* PLP 
 - **Potential Problems:** device drivers, OS isnt allowing the user onto the internet 
 
 
@@ -26,7 +26,7 @@
 - allows users on different machines to create sessions between them
 - Example website has to create a session with the webserver you are trying to get data from
 - connection between to two computers
-- *protocal:* SLP 
+- *protocol:* SLP 
 - **Potential Problems:** webserver settings could be setup wrong
 
 
@@ -39,7 +39,7 @@
 - routing of packets to correct destination
 - IP address is at the this layer
 	- subnet masks, default gates, ect.
--  *protocal:* TCP
+-  *protocol:* TCP
 
 ## Data Link
 - transmission of error free data in the form of Frames
