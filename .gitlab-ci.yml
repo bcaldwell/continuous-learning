@@ -1,8 +1,7 @@
 image: node
 
 before_script:
-  - npm config set loglevel silent
-  - npm i markdown-spellcheck -g
+  - npm i markdown-spellcheck -g --silent
 
 cache:
   paths:
