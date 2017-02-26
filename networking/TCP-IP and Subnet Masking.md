@@ -48,7 +48,7 @@
 -  DHCP
 	-  dynamic host control protocol
 	-  every computer needs to now its IP, subnet, default gateway and dns server
-		-  can be inputed manually, static IP
+		-  can be inputted manually, static IP
 			-  annoying because you cant reuse IPs and packets would go to wrong computers
 		-  dynamic IPs
 			-  when the computer connects it will call out to the DHCP server which will tell it its IP, subnet, default gateway and dns server
@@ -114,7 +114,7 @@
 - CIDR doesnt relate to the class because of subnets
 - CIDR is number of bits that are "on" (are the network side)
 - private ranges are not routable on the internet (used in NAT)
-- Boardcast and range of /24
+- Broadcast and range of /24
 
 | ID | Range | Broadcast (ID + Host count)|
 |---|---|---|

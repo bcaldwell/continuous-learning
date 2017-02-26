@@ -7,7 +7,7 @@
 
 ### Tips
 - make "happy" return statement last
-- instead of writing else concider flipping the logic
+- instead of writing else consider flipping the logic
 
 	```
 	if something.Ok() {
