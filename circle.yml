@@ -11,7 +11,7 @@ test:
     # Publish the Github Pages Site
     - mv jekyll/* .
     - rm -rf jekyll
-    #- ruby ./bin/toc.rb
+    - ruby ./bin/toc.rb
     - git status
     - git add --all .
     - git commit -m 'Build jekyll site' || true

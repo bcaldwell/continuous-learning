@@ -3,8 +3,5 @@ layout: page
 title: {{ site.name }}
 ---
 
-
-
-{% capture x %}
-{% include_relative _docs/_getting-started.md %} 
-{% endcapture %}{{ x | markdownify }}
+<h3>Table of Contents</h3>
+{% include toc.html %}
