@@ -1,0 +1,48 @@
+# Setup
+title:        devctl
+tagline:      An easy way to manage development environemts
+baseurl:      ""
+paginate:     1
+
+# About/contact
+author:
+  name:       Benjamin Caldwell
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+
+permalink: pretty
+
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+#Others
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+  syntax_highlighter_opts:
+    css_class: 'rougeHighlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1

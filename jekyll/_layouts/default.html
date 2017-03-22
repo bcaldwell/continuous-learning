@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  {% include head.html %}
+
+  <body>
+    {% include navbar.html %}
+
+    {{content}}
+
+    {% for script in page.scripts %}
+      <script type="text/javascript" src="{{script}}" async></script>
+    {% endfor %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.1/velocity.min.js" defer></script>
+    <script src="/js/script.js" defer></script>
+  </body>
+</html>

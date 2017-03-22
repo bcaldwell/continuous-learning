@@ -1,0 +1,10 @@
+.language-sh pre {
+  background: $color-2;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  border-left: 4px solid $devctl-blue;
+
+  code {
+      color: white;
+  }
+}

@@ -1,0 +1,27 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+
+$black: #424242;
+$white: #ffffff;
+
+$color-2: #222222;
+$color-4: #444444;
+$color-6: #666666;
+
+$devctl-green: #159957;
+$devctl-red: #fc2d1e;
+$devctl-blue: #2196F3;
+$devctl-yellow: #f1c40d;
+$devctl-magenta: #6171c4;
+$devctl-cyan: #0095de;
+
+
+@import "bootstrap-4.0.0-alpha.5/scss/bootstrap.scss";
+@import "_base.scss";
+@import "cayman.scss";
+@import "normalize.scss";
+@import "_code.scss";
+@import "_docs.scss";
+@import "_navbar.scss";

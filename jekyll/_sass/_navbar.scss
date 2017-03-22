@@ -1,0 +1,62 @@
+nav {
+  padding: 1em;
+  #navbar-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  a {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+  }
+  a, i {
+    color: $black;
+    cursor: pointer;
+    &:focus, &:hover {
+      color: $devctl-blue;
+      text-decoration: none;
+    }
+  }
+  .noHover {
+      &:focus, &:hover {
+        color: $black;
+        cursor: default;
+      }
+    }
+}
+
+
+
+@media (max-width: breakpoint-max("sm")) {
+  nav {
+    #navbar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+    }
+    #navbar-body {
+      padding: 0 1em;
+      display: none;
+      div, a {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+.doc-header {
+  @extend .page-header;
+  text-align: left;
+  padding: 3em;
+  h1 {
+    color: $white;
+    font-weight: bold;
+    font-size: 3.25rem;
+    padding-left: 0.5em;
+  }
+}

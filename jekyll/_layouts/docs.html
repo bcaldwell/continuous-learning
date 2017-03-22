@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<section class="doc-header">
+  <div class="container">
+    <h1>{{page.title}}</h1>
+  </div>
+</section>
+
+<section class="main-content container">
+
+
+<div class="row">
+
+<div class="col-md-4 push-md-8 col-lg-2 push-lg-10 table-of-contents">
+  <h2 id="toc-header">Table of Contents   <i class="fa fa-chevron-down" aria-hidden="true" id="toc-arrow"></i> </h2>
+  <div id="toc-body">
+  {% for section in site.data.docs %}
+    <h4>{{ section.title }}</h4>
+    {% for item in section.docs %}
+
+        {% assign item_url = item | prepend:"/docs/" | append:"/" %}
+        {% assign p = site.docs | where:"url", item_url | first %}
+
+        <li class="{% if item_url == page.url %}current{% endif %}"><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endfor %}
+  {% endfor %}
+  </div>
+  <hr class="hidden-md-up">
+</div>
+
+
+<div class="col-sm-12 col-md-8 pull-md-4 col-lg-10 pull-lg-2 doc-content" >
+    {{ content }}
+
+  {% assign docs = site.data.docs | map: 'docs' | join: ',' | split: ',' %}
+
+  {% for document in docs %}
+    {% assign document_url = document | prepend:"/docs/" | append:"/" %}
+    {% if document_url == page.url %}
+      <div class="section-nav clearfix">
+        {% unless forloop.first %}
+          {% assign previous = forloop.index0 | minus: 1 %}
+          {% assign previous_page = docs[previous] | prepend:"/docs/" | append:"/" %}
+          <a href="{{ previous_page }}" class="prev section-nav-btn float-xs-left">Back</a>
+        {% endunless %}
+        {% unless forloop.last %}
+          {% assign next = forloop.index0 | plus: 1 %}
+          {% assign next_page = docs[next] | prepend:"/docs/" | append:"/" %}
+          <a href="{{ next_page }}" class="next section-nav-btn float-xs-right">Next</a>
+        {% endunless %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+</div>
+
+</div>
+</section>

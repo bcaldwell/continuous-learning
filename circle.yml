@@ -1,0 +1,18 @@
+general:
+  branches:
+    only:
+      - master
+
+test:
+  override:
+    - git fetch
+    - git config --global user.email "bot@bcaldwell.ca" && git config --global user.name "Benjamin Bot"
+
+    # Publish the Github Pages Site
+    - mv jekyll/* .
+    - rm -rf jekyll
+    #- ruby ./bin/toc.rb
+    - git status
+    - git add --all .
+    - git commit -m 'Build jekyll site' || true
+    - git push origin HEAD:gh-pages -f || true

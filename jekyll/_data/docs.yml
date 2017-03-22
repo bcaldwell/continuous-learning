@@ -1,0 +1,22 @@
+--- 
+- title: "Getting Started"
+  docs: 
+  - home
+
+- title:  devctl.yml
+  docs:
+  - devctl-yml-introduction
+  - node
+  - go
+  - services
+  - docker-compose
+
+- title: CLI Commands
+  docs:
+  - cli-introduction
+  - cd
+  - clone
+  - up
+  - down
+  - run
+  - generate

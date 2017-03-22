@@ -1,0 +1,7 @@
+---
+layout: basic
+---
+Latest:{{site.data.sha.darwin_amd64[site.data.version.latest]}}
+{% for version in site.data.sha.darwin_amd64 %}
+{{version[0]}}:{{version[1]}}
+{% endfor %}
