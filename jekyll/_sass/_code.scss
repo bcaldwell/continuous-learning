@@ -1,10 +1,10 @@
-.language-sh pre {
-  background: $color-2;
+.highlighter-rouge pre {
+  background: $color-e;
   color: white;
   -webkit-font-smoothing: antialiased;
-  border-left: 4px solid $devctl-blue;
+  border-left: 4px solid $blue;
 
   code {
-      color: white;
+      color: $color-2;
   }
 }

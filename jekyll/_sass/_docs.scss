@@ -4,7 +4,7 @@
     list-style-type: none;
   }
   a {
-    color: $devctl-blue;
+    color: $blue;
     &:hover {
       text-decoration: none;
       color: $black;
@@ -50,8 +50,8 @@
     font-size: 1rem;
     border-radius: .25rem;
     transition: all 0.2s ease-in-out;
-    background-color: $devctl-blue;
-    border-color: $devctl-blue;
+    background-color: $blue;
+    border-color: $blue;
     color: $white;
 
     &:hover {

@@ -3,7 +3,7 @@
 ## Line of sight
 - as you scan down the first indentation you can figure out what is happening in the function
 - when you scan down the second indentation you see error handling
-![](pictures/Line-of-sight.png)
+![](../pictures/Line-of-sight.png)
 
 ### Tips
 - make "happy" return statement last
@@ -12,19 +12,20 @@
 	```
 	if something.Ok() {
 	  return true, nil
-   } else 
+   } else
      return false, errors.New("something)
    }
    ```
+
    vs
-   
-   	```
-	if !something.Ok() {
+
+    ```
+    if !something.Ok() {
       return false, errors.New("something)
-   } 
-   return true, nil
-   ```
- 
+    }
+    return true, nil
+    ```
+
  ## Single method interfaces
  - easy to use
  - easy to implement
@@ -32,7 +33,7 @@
  - simpler = more powerful and useful
 
  ## Function types alternative for signal method interface  
-![](pictures/function types alternative for signal method interface.png)   
+![](../pictures/function types alternative for signal method interface.png)   
 
 ## Printing to log blocks
 - easier to see logs you care about
@@ -50,9 +51,9 @@ func something() {
 - caller doesnt need to worry about cleaning up
 - if setup changes teardown code is with it
 
-![](pictures/teardown_1.png)
-![](pictures/teardown_2.png)
-![](pictures/teardown_3.png)
+![](../pictures/teardown_1.png)
+![](../pictures/teardown_2.png)
+![](../pictures/teardown_3.png)
 
 ## Discovering interfaces
 ```
@@ -80,13 +81,13 @@ type Sizer interface {
 
 ## Optional features
 - function that calls options functions if that method exists. `obj, ok := v.(Valid)`
-![](pictures/optional_features.png)
-	
+![](../pictures/optional_features.png)
+
 ## Simple mocks
 - implement the interface but pass execution directly to the function fields
 - only have to define functions that you need
-![](pictures/simple_mock_1.png)
-![](pictures/simple_mock_2.png)
+![](../pictures/simple_mock_1.png)
+![](../pictures/simple_mock_2.png)
 
 
 ## Mocking other people's structs
@@ -105,17 +106,17 @@ type Messenger interface {
 ```
 
 ## Retrying
-![](pictures/retrying.png)
+![](../pictures/retrying.png)
 - dont use library, just copy it
 - usage with delay
-![](pictures/retry_delay.png)
+![](../pictures/retry_delay.png)
 
 ## Empty struct implementations
-![](pictures/empty_struct.png)
+![](../pictures/empty_struct.png)
 
 ## Semaphores
 - limit number of go routines
-- ![](pictures/semaphores.png)
+- ![](../pictures/semaphores.png)
 
 ## Don't be clever
 - example:
@@ -139,6 +140,4 @@ func something() {
 - seek simplicity
 - learn from others
 
-[source](https://www.youtube.com/watch?v=yeetIgNeIkc&t=328s) 
-
-
+[source](https://www.youtube.com/watch?v=yeetIgNeIkc&t=328s)
