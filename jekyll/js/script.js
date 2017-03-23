@@ -13,7 +13,7 @@ if (tocBody){
     } else {
       classList.add("active")
       Velocity(tocBody, "slideDown", { duration: 400 });
-      Velocity(tocArrow, {rotateZ: "0deg"} , { duration: 400 });
+      Velocity(tocArrow, {rotateZ: "360deg"} , { duration: 400 });
     }
   }
 }
