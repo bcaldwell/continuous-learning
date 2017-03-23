@@ -18,3 +18,15 @@ if (tocBody){
     }
   }
 }
+
+// velocity href scrolling
+document.querySelectorAll('a[href*="#"]').onclick = function(event){
+  e.preventDefault();
+  e.stopPropagation();
+
+  // set target to anchor's "href" attribute
+  var targetID = element.target.getAttribute('href');
+  var target = document.getElementById(targetID.substring(1))
+  // scroll to each target
+  Velocity(target, "scroll" , { duration: 400, offset: -40, easing: 'ease-in-out' });
+}
