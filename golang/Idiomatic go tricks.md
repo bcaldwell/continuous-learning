@@ -9,22 +9,22 @@
 - make "happy" return statement last
 - instead of writing else consider flipping the logic
 
-	```
-	if something.Ok() {
-	  return true, nil
-   } else
-     return false, errors.New("something)
-   }
-   ```
+  ``` go
+  if something.Ok() {
+    return true, nil
+  } else
+    return false, errors.New("something")
+  }
+  ```
 
    vs
 
-    ```
-    if !something.Ok() {
-      return false, errors.New("something)
-    }
-    return true, nil
-    ```
+  ``` go
+  if !something.Ok() {
+    return false, errors.New("something")
+  }
+  return true, nil
+  ```
 
 
 ## Single method interfaces
@@ -39,7 +39,7 @@
 ## Printing to log blocks
 - easier to see logs you care about
 
-```
+``` go
 func something() {
    log.Println("---------")
    defer log.Println("--------")
@@ -57,7 +57,7 @@ func something() {
 ![](pictures/teardown_3.png)
 
 ## Discovering interfaces
-```
+``` go
 type Sizer interface {
   Size() int64
 }
@@ -66,14 +66,14 @@ type Sizer interface {
 	- now the slice can implement the sizer interface...can treat many objects as one
 - can write an ad-hoc size calculator that makes use of the same methods:
 
-	```
+	``` go
 	type SizeFunc func() int 64
 	func (s SizeFun) Size() int64 {
 	   return s()
 	}
 	```
 - can just be the type itself
-	```
+	``` go
 	type Size int64
 	func (s Size) Size() int64 {
 	   return int64(s)
@@ -94,13 +94,13 @@ type Sizer interface {
 ## Mocking other people's structs
 - sometimes a library provides a struct but no interface but we need to mock it in test code
 - make your own interface which the struct already implements
-```
+``` go
 package them
 type Messenger struct{}
 func (m *Messenger) Send(){}
 ```
 
-```
+``` go
 type Messenger interface {
    Send(){}
 }
@@ -121,14 +121,14 @@ type Messenger interface {
 
 ## Don't be clever
 - example:
-```
+``` go
 func something() {
     defer StartTimer("something")()
 }
 ```
 should be
 
-```
+``` go
 func something() {
     stop := StartTimer("something")
     defer stop()    

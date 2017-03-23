@@ -2,7 +2,7 @@
 
 In golang we can as methods to structs to give them more functionality. For example given the struct:
 
-```
+``` go
 type Person struct {
 	name string
 	age  int
@@ -11,7 +11,7 @@ type Person struct {
 
 we can define a method on it as such
 
-```
+``` go
 func (p Person) greet() {
 	return "Hello " + p.name
 }
@@ -22,7 +22,7 @@ func (p Person) greet() {
 ### Pointer methods
 Defined like `func (t *Type)` using the `*` operator. For example:
 
-```
+``` go
 func (p *Person) growup() {
 	p.age = 80
 }
@@ -33,7 +33,7 @@ When using pointer methods you **can modify** the struct inside of them. Can be 
 ### Value Methods
 Defined like `func (t Type)`. For example:
 
-```
+``` go
 func (p *Person) intro() {
 	return "My name is " + p.name
 }
@@ -45,7 +45,7 @@ When using pointer methods you **cant modify** the struct inside of them. Can be
 
 ##### Code
 
-```
+``` go
 package main
 
 import "fmt"
@@ -74,7 +74,7 @@ func main() {
 ```
 
 ##### Output
-```
+``` go
 {name:name age:10}
 value: {name:name age:10}
 pointer: {name:name age:100}
@@ -87,7 +87,7 @@ pointer: {name:name age:100}
 Anonymous fields are fields in a struct that have no variable names
 
 ##### Example
-```
+``` go
 type Child struct {
 	Person
 }
@@ -95,10 +95,10 @@ type Child struct {
 Doing this allows child to access the member functions of Person. Composed field (ie field that belong to the anonymous field) can also be accessed by its type. Ex `c.Person.age` or `c.age`. Additionally we need to use the type name when initializing the values of child. Ex `Child{Person{"name", 10}}`. In the case of a name conflict for methods the outer struct is accessible by default. The inner struct can be reference by use the inner struct's type.
 
 #### Anonymous methods
-Methods can also be attached to structs with anonymous methods. Inside these methods the properties of the inner struct can be referenced. 
+Methods can also be attached to structs with anonymous methods. Inside these methods the properties of the inner struct can be referenced.
 
 ##### Example
-```
+``` go
 package main
 
 import "fmt"
@@ -126,7 +126,7 @@ func main() {
 
 ##### Output
 
-```
+``` go
 Full time now: 2016-07-06 00:17:54.986496857 -0400 EDT
 First 5 chars: 2016-
 First 5 chars: 2016-

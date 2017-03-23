@@ -62,7 +62,7 @@
 ## Thinking of errors as strings
 - error is an interface
 
-```
+``` go
 type error interface {
 	Error() string
 }
@@ -71,9 +71,9 @@ type error interface {
 	- errors.New("error here") is usually sufficient
 	- exported error variables can be easily checked
 - Example:
-	- okay but not great:	
+	- okay but not great:
 
-```
+``` go
 func NewPage() {
 return errors.New("some error")
 }
@@ -81,7 +81,7 @@ return errors.New("some error")
 
    - better: export error value
 
-```
+``` go
 var SomeError = errors.New("some error")
 func NewPage() {
 return SomeError
@@ -93,7 +93,7 @@ return SomeError
 	- provide a type which can be different from the error value
 	- can provide dynamic values (based on internal error state)
 
-	
+
 ##TO be safe or not to be
 - if you provide a library someone will use it concurrently
 - data structures are not safe for concurrent access
@@ -106,4 +106,3 @@ return SomeError
 	- imposes behaviors on consumer
 	- proper API allows consumers to add safety as needed
 	- consumers can choose how to do it
- 
