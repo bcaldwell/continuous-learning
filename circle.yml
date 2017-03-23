@@ -7,7 +7,7 @@ checkout:
     - git submodule sync
     - git submodule update --init --recursive --remote # use submodules
     - gem install htmlbeautifier
-    
+
 test:
   override:
     - git fetch
@@ -20,4 +20,5 @@ test:
     - git status
     - git add --all .
     - git commit -m 'Build jekyll site' || true
-    - git push origin HEAD:gh-pages -f || true
+    - git remote add gitlab git@gitlab.caldwellbenjam.in:benjamin/continuous-learning.git || true
+    - git push gitlab HEAD:gh-pages -f || true
