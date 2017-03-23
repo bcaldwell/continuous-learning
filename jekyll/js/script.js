@@ -1,10 +1,11 @@
 var tocHeader = document.getElementById("toc-header")
 var tocBody = document.getElementById("markdown-toc")
 var tocArrow = document.getElementById("toc-arrow")
+
 if (tocBody){
-  tocHeader.classList.add("active")
+  var classList = element.target.classList
+  classList.add("active")
   tocHeader.onclick = function(element){
-    var classList = element.target.classList
     if (classList.contains("active")){
       classList.remove("active")
       Velocity(tocBody, "slideUp", { duration: 400 });
@@ -15,5 +16,4 @@ if (tocBody){
       Velocity(tocArrow, {rotateZ: "180deg"} , { duration: 400 });
     }
   }
-  tocBodyStyle = tocBody.style;
 }
