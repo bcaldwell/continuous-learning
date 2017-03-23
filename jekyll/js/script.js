@@ -1,8 +1,9 @@
-
+var tocBody = document.getElementById("toc-header")
 var tocBody = document.getElementById("markdown-toc")
 var tocArrow = document.getElementById("toc-arrow")
 if (tocBody){
-  document.getElementById("toc-header").onclick = function(element){
+  tocBody.classList.add("active")
+  tocBody.onclick = function(element){
     var classList = element.target.classList
     if (classList.contains("active")){
       classList.remove("active")
