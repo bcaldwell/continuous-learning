@@ -1,5 +1,8 @@
 # Idiomatic Go Tricks
 
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 ## Line of sight
 - as you scan down the first indentation you can figure out what is happening in the function
 - when you scan down the second indentation you see error handling
