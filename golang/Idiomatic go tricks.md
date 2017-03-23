@@ -1,7 +1,8 @@
 # Idiomatic Go Tricks
 
-<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
 {:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
@@ -31,13 +32,14 @@
     return true, nil
     ```
 
- ## Single method interfaces
+
+## Single method interfaces
  - easy to use
  - easy to implement
 	 - more likely to use
  - simpler = more powerful and useful
 
- ## Function types alternative for signal method interface  
+## Function types alternative for signal method interface  
 ![](../pictures/function types alternative for signal method interface.png)   
 
 ## Printing to log blocks
