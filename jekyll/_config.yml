@@ -40,7 +40,7 @@ kramdown:
   syntax_highlighter: rouge
 
   syntax_highlighter_opts:
-    css_class: 'rougeHighlight'
+    css_class: 'rougeHighlight highlight'
     span:
       line_numbers: false
     block:
