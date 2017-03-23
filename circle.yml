@@ -17,6 +17,7 @@ test:
     - mv jekyll/* .
     - rm -rf jekyll
     - ruby ./bin/toc.rb
+    - ruby ./bin/format_page.rb
     - git status
     - git add --all .
     - git commit -m 'Build jekyll site'
