@@ -3,7 +3,7 @@ var tocBody = document.getElementById("markdown-toc")
 var tocArrow = document.getElementById("toc-arrow")
 
 if (tocBody){
-  var classList = element.target.classList
+  var classList = tocHeader.classList
   classList.add("active")
   tocHeader.onclick = function(element){
     if (classList.contains("active")){
