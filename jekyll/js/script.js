@@ -6,18 +6,17 @@ window.onload = function() {
   if (tocBody){
     var classList = tocHeader.classList
     classList.add("active")
-    tocHeader.onclick = function(element){
+    tocHeader.addEventListener('click', function(element){
       if (classList.contains("active")){
         classList.remove("active")
         Velocity(tocBody, "slideUp", { duration: 400 });
-        Velocity(tocArrow, {rotateZ: "0deg"} , { duration: 0 });
         Velocity(tocArrow, {rotateZ: "180deg"} , { duration: 400 });
       } else {
         classList.add("active")
         Velocity(tocBody, "slideDown", { duration: 400 });
         Velocity(tocArrow, {rotateZ: "360deg"} , { duration: 400 });
       }
-    }
+    })
   }
 
   // velocity href scrolling
