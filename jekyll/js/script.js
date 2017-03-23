@@ -9,6 +9,7 @@ if (tocBody){
     if (classList.contains("active")){
       classList.remove("active")
       Velocity(tocBody, "slideUp", { duration: 400 });
+      Velocity(tocArrow, {rotateZ: "180deg"} , { duration: 0 });
       Velocity(tocArrow, {rotateZ: "180deg"} , { duration: 400 });
     } else {
       classList.add("active")
