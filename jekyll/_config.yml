@@ -21,7 +21,6 @@ sass:
     style: compressed
 
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
