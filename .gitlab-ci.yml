@@ -10,4 +10,4 @@ cache:
 
 spell_check:
   script:
-    - mdspell --en-us -n -r "**/*.md"
+    - mdspell --en-us -n -r -a "**/*.md" "!**/jekyll/**/*.md"
