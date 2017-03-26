@@ -1,29 +1,29 @@
-machine:
-  ruby:
-    version: "2.4"
+# machine:
+#   ruby:
+#     version: "2.4"
 
-general:
-  branches:
-    only:
-      - master
-checkout:
-  post:
-    - git submodule sync
-    - git submodule update --init --recursive --remote # use submodules
-    - gem install htmlbeautifier
+# general:
+#   branches:
+#     only:
+#       - master
+# checkout:
+#   post:
+#     - git submodule sync
+#     - git submodule update --init --recursive --remote # use submodules
+#     - gem install htmlbeautifier
 
-test:
-  override:
-    - git fetch
-    - git config --global user.email "bot@bcaldwell.ca" && git config --global user.name "Benjamin Bot"
+# test:
+#   override:
+#     - git fetch
+#     - git config --global user.email "bot@bcaldwell.ca" && git config --global user.name "Benjamin Bot"
 
-    # Publish the Github Pages Site
-    - mv jekyll/* .
-    - rm -rf jekyll
-    - ruby ./bin/toc.rb
-    - ruby ./bin/format_page.rb
-    - git status || true
-    - git add --all . || true
-    - git commit -m 'Build jekyll site' || true
-    - git remote add gitlab git@gitlab.caldwellbenjam.in:benjamin/continuous-learning.git || true
-    - ssh-agent bash -c 'ssh-add ~/.ssh/id_circleci_github; git push gitlab HEAD:gh-pages -f' || true
+#     # Publish the Github Pages Site
+#     - mv jekyll/* .
+#     - rm -rf jekyll
+#     - ruby ./bin/toc.rb
+#     - ruby ./bin/format_page.rb
+#     - git status || true
+#     - git add --all . || true
+#     - git commit -m 'Build jekyll site' || true
+#     - git remote add gitlab git@gitlab.caldwellbenjam.in:benjamin/continuous-learning.git || true
+#     - ssh-agent bash -c 'ssh-add ~/.ssh/id_circleci_github; git push gitlab HEAD:gh-pages -f' || true

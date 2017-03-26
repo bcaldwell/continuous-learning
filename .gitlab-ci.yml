@@ -21,7 +21,10 @@ gh_paages:
     - gem install htmlbeautifier
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)
-    - ssh-add <(echo "$GITLAB-CI-WRITE-KEY")
+    - echo "${GITLAB_CI_WRITE_KEY}"
+    - ssh-add <(echo "${GITLAB_CI_WRITE_KEY}")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo "${SSH_SERVER_HOSTKEYS}" > ~/.ssh/known_hosts'
   script:
     - git fetch
     - git config --global user.email "bot@bcaldwell.ca" && git config --global user.name "Benjamin Bot"
