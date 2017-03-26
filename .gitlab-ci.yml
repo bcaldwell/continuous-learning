@@ -7,6 +7,8 @@ cache:
   - /usr/local/bin
 
 spell_check:
+  before_script:
+    - npm i markdown-spellcheck -g --silent
   script:
     - mdspell --en-us -n -r -a "**/*.md" "!**/jekyll/**/*.md"
   only:
@@ -15,6 +17,8 @@ spell_check:
 gh_paages:
   image: ruby:2.4
   stage: deploy
+  before_script:
+    - gem install htmlbeautifier
   script:
     - git fetch
     - git config --global user.email "bot@bcaldwell.ca" && git config --global user.name "Benjamin Bot"
