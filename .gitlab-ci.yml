@@ -14,23 +14,26 @@ spell_check:
   only:
     - master
     
-# gh_paages:
-#   image: ruby:2.4
-#   stage: deploy
-#   before_script:
-#     - gem install htmlbeautifier
-#   script:
-#     - git fetch
-#     - git config --global user.email "bot@bcaldwell.ca" && git config --global user.name "Benjamin Bot"
+gh_paages:
+  image: ruby:2.4
+  stage: deploy
+  before_script:
+    - gem install htmlbeautifier
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$GITLAB-CI-WRITE-KEY")
+  script:
+    - git fetch
+    - git config --global user.email "bot@bcaldwell.ca" && git config --global user.name "Benjamin Bot"
 
-#     # Publish the Github Pages Site
-#     - mv jekyll/* .
-#     - rm -rf jekyll
-#     - ruby ./bin/toc.rb
-#     - ruby ./bin/format_page.rb
-#     - git status || true
-#     - git add --all . || true
-#     - git commit -m 'Build jekyll site' || true
-#     - git push gitlab HEAD:gh-pages -f || true
-#   only:
-#     - master
+    # Publish the Github Pages Site
+    - mv jekyll/* .
+    - rm -rf jekyll
+    - ruby ./bin/toc.rb
+    - ruby ./bin/format_page.rb
+    - git status
+    - git add --all .
+    - git commit -m 'Build jekyll site'
+    - git push gitlab HEAD:gh-pages -f
+  only:
+    - master
