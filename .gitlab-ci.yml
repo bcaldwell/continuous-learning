@@ -13,6 +13,7 @@ spell_check:
     - mdspell --en-us -n -r -a "**/*.md" "!**/jekyll/**/*.md"
   only:
     - master
+  allow_failure: true
     
 gh_pages:
   image: ruby:2.4
