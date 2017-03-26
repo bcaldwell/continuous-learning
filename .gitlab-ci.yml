@@ -1,8 +1,6 @@
 image: node
-
 before_script:
   - npm i markdown-spellcheck -g --silent
-
 cache:
   paths:
   - /usr/local/lib/node_modules
@@ -11,3 +9,22 @@ cache:
 spell_check:
   script:
     - mdspell --en-us -n -r -a "**/*.md" "!**/jekyll/**/*.md"
+  only:
+    - master
+    
+gh_paages:
+  image: ruby:2.4
+  stage: deploy
+  script:
+    - git fetch
+    - git config --global user.email "bot@bcaldwell.ca" && git config --global user.name "Benjamin Bot"
+
+    # Publish the Github Pages Site
+    - mv jekyll/* .
+    - rm -rf jekyll
+    - ruby ./bin/toc.rb
+    - ruby ./bin/format_page.rb
+    - git status
+    - git add --all .
+    - git commit -m 'Build jekyll site'
+    - git push gitlab HEAD:gh-pages -f
