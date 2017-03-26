@@ -16,14 +16,15 @@ spell_check:
     
 gh_pages:
   image: ruby:2.4
-  stage: deploy
   before_script:
     - gem install htmlbeautifier
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)
     - ssh-add <(echo "${GITLAB_CI_WRITE_KEY}")
     - mkdir -p ~/.ssh
+    - echo "${SSH_SERVER_HOSTKEYS}"
     - '[[ -f /.dockerenv ]] && echo "${SSH_SERVER_HOSTKEYS}" > ~/.ssh/known_hosts'
+    - cat ~/.ssh/known_hosts
 
   script:
     - git fetch
