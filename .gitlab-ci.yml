@@ -13,8 +13,10 @@ spell_check:
     - mdspell --en-us -n -r -a "**/*.md" "!**/jekyll/**/*.md"
   only:
     - master
+  allow_failure: true
     
 gh_pages:
+  stage: deploy
   image: ruby:2.4
   before_script:
     - gem install htmlbeautifier
