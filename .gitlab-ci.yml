@@ -28,3 +28,5 @@ gh_paages:
     - git add --all .
     - git commit -m 'Build jekyll site'
     - git push gitlab HEAD:gh-pages -f
+  only:
+    - master
