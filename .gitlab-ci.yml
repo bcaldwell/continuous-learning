@@ -22,9 +22,7 @@ gh_pages:
     - eval $(ssh-agent -s)
     - ssh-add <(echo "${GITLAB_CI_WRITE_KEY}")
     - mkdir -p ~/.ssh
-    - echo "${SSH_SERVER_HOSTKEYS}"
     - '[[ -f /.dockerenv ]] && echo "${SSH_SERVER_HOSTKEYS}" > ~/.ssh/known_hosts'
-    - cat ~/.ssh/known_hosts
 
   script:
     - git fetch
