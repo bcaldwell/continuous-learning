@@ -10,7 +10,7 @@ Inside the runner run:
 ``` bash
 gitlab-ci-multi-runner register
 ```
-Enter the requested information. For your `gitlab-ci coordinator URL` use `gitlab-url/ci`. Uur `gitlab-ci token` can be found at gitlab-url/admin/runners or project runners page. Note: only `gitlab-ci coordinator URL` and `gitlab-url/ci` are required. Lastly enter kubernetes as the executor.
+Enter the requested information. For your `gitlab-ci coordinator URL` use `gitlab-url/ci`. User `gitlab-ci token` can be found at gitlab-url/admin/runners or project runners page. Note: only `gitlab-ci coordinator URL` and `gitlab-url/ci` are required. Lastly enter kubernetes as the executor.
 
 OR
 

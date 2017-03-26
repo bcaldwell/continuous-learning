@@ -158,5 +158,19 @@ x.x.x.32
 x.x.x.47
 x.x.x.48
 x.x.x.63
+Gitlab
+gitlab
+cpu
+kubeadm
+Kubelet
+https
  - clusters/kubernetes/README.md
 aws
+ - clusters/kubernetes/deployments/gitlab runner.md
+gitlab-url
+ - clusters/kubernetes/Install kubernetes on 1 cpu cluster with kubeadm.md
+OutOfcpu
+ - clusters/kubernetes/Kubernetes firewall networking.md
+Heapster
+Intra-cluster
+vxlan
