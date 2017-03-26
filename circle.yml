@@ -22,8 +22,8 @@ test:
     - rm -rf jekyll
     - ruby ./bin/toc.rb
     - ruby ./bin/format_page.rb
-    - git status
-    - git add --all .
-    - git commit -m 'Build jekyll site'
-    - git remote add gitlab git@gitlab.caldwellbenjam.in:benjamin/continuous-learning.git
-    - ssh-agent bash -c 'ssh-add ~/.ssh/id_circleci_github; git push gitlab HEAD:gh-pages -f'
+    - git status || true
+    - git add --all . || true
+    - git commit -m 'Build jekyll site' || true
+    - git remote add gitlab git@gitlab.caldwellbenjam.in:benjamin/continuous-learning.git || true
+    - ssh-agent bash -c 'ssh-add ~/.ssh/id_circleci_github; git push gitlab HEAD:gh-pages -f' || true
