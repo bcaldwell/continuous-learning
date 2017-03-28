@@ -30,8 +30,8 @@ before_script:
   # In order to properly check the server's host key, assuming you created the
   # SSH_SERVER_HOSTKEYS variable previously, uncomment the following two lines
   # instead.
-  # - mkdir -p ~/.ssh
-  # - '[[ -f /.dockerenv ]] && echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts'
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts'
   ```
   
 [source](https://docs.gitlab.com/ee/ci/ssh_keys/README.html)

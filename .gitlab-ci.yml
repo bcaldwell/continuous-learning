@@ -43,4 +43,4 @@ gh_pages:
     - master
   environment:
     name: github pages
-    url: http://cl.bcaldwell.ca
+    url: https://cl.bcaldwell.ca
