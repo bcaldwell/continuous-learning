@@ -5,6 +5,11 @@ cache:
   paths:
   - /usr/local/lib/node_modules
   - /usr/local/bin
+  - ~/diatex
+variables:
+  - DIATEX_CDN_REPO: benjamincaldwell/gitcdn
+  - DIATEX_IMAGE_BASE_PATH: "http://gitcdn.bcaldwell.ca"
+  - DIATEX_URL: "https://diatex.bcaldwell.ca"
 
 spell_check:
   before_script:
@@ -14,7 +19,7 @@ spell_check:
   only:
     - master
   allow_failure: true
-    
+
 gh_pages:
   image: ruby:2.4
   before_script:
@@ -24,10 +29,19 @@ gh_pages:
     - ssh-add <(echo "${GITLAB_CI_WRITE_KEY}")
     - mkdir -p ~/.ssh
     - '[[ -f /.dockerenv ]] && echo "${SSH_SERVER_HOSTKEYS}" > ~/.ssh/known_hosts'
+    - [ -d "~/diatex" ] && cd ~/diatex && git reset --hard origin/master
+    - [ ! -d "~/diatex" ] && git clone https://github.com/benjamincaldwell/diatex.git ~/diatex
 
   script:
     - git fetch
     - git config --global user.email "bot@bcaldwell.ca" && git config --global user.name "Benjamin Bot"
+
+    # Run diatex
+    - ruby ~/diatex/diatex ../
+    - git status
+    - git add --all .
+    - git commit -m "Convert latex and diagram for '$(git log -1 --pretty=%B)' [ci skip]" || true
+    - git push origin master || true
 
     # Publish the Github Pages Site
     - mv jekyll/* .

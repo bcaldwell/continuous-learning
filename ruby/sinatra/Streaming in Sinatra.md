@@ -76,6 +76,24 @@ get '/' do
 end
 ```
 
+
+``` ruby
+require 'sinatra/streaming'
+class myApp < Sinatra::Base
+  helpers Sinatra::Streaming
+  get '/log' do
+    stream do |out|
+      out.puts "Hello World!", "How are you? arhs"
+	    sleep 1
+			out.puts "That was a good nap"
+      out.write "Written #{out.pos} bytes so far!\n"
+      out.putc(65) unless out.closed?
+      out.flush
+    end
+  end
+end
+```
+
 [sinatra](http://www.sinatrarb.com/intro#Streaming%20Responses)
 
 [IO](https://ruby-doc.org/core-2.3.1/IO.html)
