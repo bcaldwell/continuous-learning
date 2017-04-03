@@ -37,11 +37,11 @@ gh_pages:
     - git config --global user.email "bot@bcaldwell.ca" && git config --global user.name "Benjamin Bot"
 
     # Run diatex
-    - ruby ~/diatex/diatex .
-    - git status
-    - git add --all .
-    - git commit -m "Convert latex and diagram for '$(git log -1 --pretty=%B)' [ci skip]" || true
-    - git push origin master || true
+#    - ruby ~/diatex/diatex .
+#    - git status
+#    - git add --all .
+#    - git commit -m "Convert latex and diagram for '$(git log -1 --pretty=%B)' [ci skip]" || true
+#    - git push origin master || true
 
     # Publish the Github Pages Site
     - mv jekyll/* .
