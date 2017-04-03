@@ -31,7 +31,7 @@
      A-\->Tiler
 ```
 --->
-<img src='http://gitcdn.jnadeau.ca/images/diatex/diagram/50ae4e485764dcbff25a4c89c3fddd28.png' alt='diagram image' width='100%'>
+<img src='http://gitcdn.bcaldwell.ca/images/diatex/diagram/50ae4e485764dcbff25a4c89c3fddd28.png' alt='diagram image' width='100%'>
 
 
 ## Basic usage

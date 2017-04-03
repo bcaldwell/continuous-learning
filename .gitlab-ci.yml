@@ -23,6 +23,7 @@ spell_check:
 gh_pages:
   image: ruby:2.4
   before_script:
+    - export LC_ALL="en_US.UTF-8"
     - gem install htmlbeautifier
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)
