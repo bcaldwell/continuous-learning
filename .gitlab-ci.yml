@@ -10,6 +10,9 @@ variables:
   DIATEX_CDN_REPO: benjamincaldwell/gitcdn
   DIATEX_IMAGE_BASE_PATH: "http://gitcdn.bcaldwell.ca"
   DIATEX_URL: "https://diatex.bcaldwell.ca"
+  LANG: en_US.UTF-8
+  LANGUAGE: en_US.UTF-8
+  LC_ALL: en_US.UTF-8
 
 spell_check:
   before_script:
