@@ -2,6 +2,7 @@
 
 ## Port allocation
 ### Master Node inbound
+
 | Protocol | Port Range | Source                                    | Purpose                |
 |----------|------------|-------------------------------------------|------------------------|
 | TCP      | 443        | Worker Nodes, API Requests, and End-Users | Kubernetes API server. |
@@ -20,12 +21,14 @@
 | TCP |	179 |	Worker Nodes	 | Calico BGP network (only required if the BGP backend is used) |
 
 ### etc Node Inbound
+
 | Protocol | Port Range | Source                                    | Purpose                |
 |----------|------------|-------------------------------------------|------------------------|
 | TCP      | 2379-2380        | Worker Nodes | etcd server client API |
 | TCP | 2379-2380 | Worker Nodes | etcd server client API (only required if using flannel or Calico).
 
 ### Ingress Nodes
+
 | Protocol | Port Range | Source                                    | Purpose                |
 |----------|------------|-------------------------------------------|------------------------|
 | TCP      | 80, 443       | External | http/https traffic |
