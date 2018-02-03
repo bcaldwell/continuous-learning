@@ -1,12 +1,19 @@
 # Load Balancing Kubernetes Services with NGINX
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 ## Why
 
 - load balancer service is limited:
 	- how it works:
 		- creates a node port on each node (requests are proxied by kube-proxy
 		- puts cloud load balancer in front with IP address
-		- ![](pictures/cloud_lb.png)
+		- ![](../pictures/cloud_lb.png)
 	- Pros:
 		- easy to set up
 	- Cons:
@@ -60,7 +67,7 @@
 ### Nginx ingress controller
 - create nginx ingress service that exposes ports 80,443.
 - traffic enters service and is proxied to correct service
-- ![](pictures/lb_nginx_ingress.png)
+- ![](../pictures/lb_nginx_ingress.png)
 - deploy configuration example
 
 ```
@@ -150,7 +157,7 @@ metadata:
 - greater flexibility
 - lose kubernetes automation. Required to deploy new nginx config for each application deploy
 - deploy nginx configuration our selves in a container
-- ![](pictures/kube-nginx.png)
+- ![](../pictures/kube-nginx.png)
 - NGINX plus can automatically discover IP address of new pods (scaled service)
 	- works with kubeDNS
 - include `spec.clusterIP: None` in service config so that DNS resolves to all pod IPs not 1 which is load balanced by kube proxy

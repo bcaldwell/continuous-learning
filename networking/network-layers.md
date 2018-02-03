@@ -5,7 +5,7 @@
 - OSI: open system interconnection
 - logical model on how network systems are supposed to communicate with each other
 
-![7 network layers](pictures/network-layers.png)
+![7 network layers](../pictures/network-layers.png)
 
 - dotted lines represent communication protocols
 

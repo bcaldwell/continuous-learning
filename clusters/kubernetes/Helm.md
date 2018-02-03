@@ -1,5 +1,12 @@
 # Helm
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 - a tool to manage a group of resources as one unit
 - gives you package of components that you can easily manage in the cluster
 - people have created charts for common software

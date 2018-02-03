@@ -1,5 +1,12 @@
 # Mircoservices + Events +Docker = A Perfect Trio
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 ## 3 attributes of successful software development
 1. Architecture
     * Monolithic vs Microservices
@@ -16,7 +23,7 @@
 - In the beginning, it is simple to Develop, test, deploy and scale
 - **Problem:** successful applications keep growing...agile and small teams are difficult
  
-![monolithic architecture](pictures/monolithic.png)
+![monolithic architecture](../pictures/monolithic.png)
 
 ## Microservice Architecture
 - 3 dimensional model of scalability
@@ -34,7 +41,7 @@
     - deploying and operating is more complex
     - **unlike monolithic there are solutions to the problems**
 
-![microservices architecture](pictures/microservices.png)
+![microservices architecture](../pictures/microservices.png)
 
 ### Shared database
 - simple to the problem (ACID transactions)
@@ -52,7 +59,7 @@
 - **challenge:** two things have to be done automatically, dual write problem
 
 ### Use event-sourcing
-- In an event table store the sequence of events instead of the actual data. For example instead of having an order table: ![microservices architecture](pictures/event-table.png)
+- In an event table store the sequence of events instead of the actual data. For example instead of having an order table: ![microservices architecture](../pictures/event-table.png)
 - don't have to handle the event and update the database you just update the event table
 - Benefits
     - replay events to recreate the state

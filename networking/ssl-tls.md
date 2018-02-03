@@ -1,5 +1,12 @@
 # SSL/TLS
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 ## WHY?
 
 #### Benefits
@@ -21,7 +28,7 @@
 
 ## How does it work?
 
-![how ssl works](pictures/ssl.gif)
+![how ssl works](../pictures/ssl.gif)
 
 1. Client requests a SSL/TLS connection ("client hello" message)
 	- specifies the encryption standards that it can use. ex AES

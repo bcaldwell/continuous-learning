@@ -1,5 +1,12 @@
 # Running kubernetes locally on a mac
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 To run kubernetes we can use a really cool application called minikube. To get started:
 
 1. [install Virtualbox](https://www.virtualbox.org/wiki/Downloads)

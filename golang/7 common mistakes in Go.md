@@ -1,5 +1,12 @@
 # 7 common mistakes in Go
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 ## Not accepting interfaces
 
 - State and behavior
@@ -10,17 +17,17 @@
 	- permit extensibility
 	- defined by methods
 	- adherence is only satisfied by behavior
-- ![](pictures/7-common-mistakes-in-go-2015-14-638.jpg)
-- ![](pictures/7-common-mistakes-in-go-2015-15-638.jpg)
+- ![](../pictures/7-common-mistakes-in-go-2015-14-638.jpg)
+- ![](../pictures/7-common-mistakes-in-go-2015-15-638.jpg)
 
 ## Note using io.Reader and io.Writer
 
 - simple and flexible interfaces for many operations around input and output
 - provide access to a huge wealth of functionality
 - keeps operations extensive
-- ![](pictures/7-common-mistakes-in-go-2015-18-638.jpg)
-- ![](pictures/7-common-mistakes-in-go-2015-22-638.jpg)
-- ![](pictures/7-common-mistakes-in-go-2015-23-638.jpg)
+- ![](../pictures/7-common-mistakes-in-go-2015-18-638.jpg)
+- ![](../pictures/7-common-mistakes-in-go-2015-22-638.jpg)
+- ![](../pictures/7-common-mistakes-in-go-2015-23-638.jpg)
 
 ## Requiring broad interfaces
 - interfaces are compossible

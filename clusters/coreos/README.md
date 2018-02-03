@@ -1,5 +1,12 @@
 # CoreOS
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 CoreOS is a Linux distribution that focuses on making large, scalable deployments clusters easy to manage. It is based on Chrome OS and uses Docker containers for all applications and thus doesn't have a package manager.
 
 ## Parts of CoreOs
