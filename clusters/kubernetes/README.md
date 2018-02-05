@@ -1,7 +1,5 @@
 # Kubernetes
 
-{:.no_toc}
-
 <h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
@@ -24,9 +22,9 @@
 
 
 ### Why is Kubernetes
-- goal is to provide a decoupling between the cluster ops and the layers of the stack 
+- goal is to provide a decoupling between the cluster ops and the layers of the stack
 
-## Kubernetes Architecture 
+## Kubernetes Architecture
 ![](../pictures/kubernetes-arch.png)
 
 - api server is stateless
@@ -42,7 +40,7 @@
 1. Collection of one or more containers that work well together
 2. Volumes that are data volumes. Life span is independent of the container lifespan
 3. Namespaces. ie: network, IPC
-	- can link stuff with localhost. shared network namespace 
+	- can link stuff with localhost. shared network namespace
 4. Labels: key value pairs for organizing stuff
 
 - Pods are an atomic unit of scheduling

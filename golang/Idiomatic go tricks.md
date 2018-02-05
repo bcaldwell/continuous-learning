@@ -1,12 +1,5 @@
 # Idiomatic Go Tricks
 
-{:.no_toc}
-
-<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
-
-
 ## Line of sight
 - as you scan down the first indentation you can figure out what is happening in the function
 - when you scan down the second indentation you see error handling

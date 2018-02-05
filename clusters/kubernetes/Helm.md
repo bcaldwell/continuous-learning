@@ -1,7 +1,5 @@
 # Helm
 
-{:.no_toc}
-
 <h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
@@ -62,7 +60,7 @@
     - Chart.yaml
     - README.md
     - charts
-        - mariabd-0.5.2.tgz 
+        - mariabd-0.5.2.tgz
     - templates
         - deployment.yaml
         - svc.yaml
@@ -90,7 +88,7 @@ override values from values.yaml:
     - post deploy information
 
 ### Metadata
-- Chart.yaml 
+- Chart.yaml
     - contains a version field
 
 ## Chart Repositories

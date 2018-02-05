@@ -1,4 +1,4 @@
-#OSI Model (network layers)
+# OSI Model (network layers)
 
 
 - main idea of networks is communication between systems

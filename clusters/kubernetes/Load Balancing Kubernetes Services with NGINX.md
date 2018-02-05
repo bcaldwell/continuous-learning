@@ -1,7 +1,5 @@
 # Load Balancing Kubernetes Services with NGINX
 
-{:.no_toc}
-
 <h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
@@ -32,7 +30,7 @@
 - ssl termination:
 	- create secret with certificate
 	- define ingress configuration:
-			
+
 		```
 		apiVersion: extensions/v1beta1
 		kind: Ingress
@@ -56,7 +54,7 @@
 		          serviceName: coffee-svc
 		          servicePort: 80
 		```
-		[source](https://github.com/nginxinc/kubernetes-ingress/blob/master/examples/complete-example/cafe-ingress.yaml)	
+		[source](https://github.com/nginxinc/kubernetes-ingress/blob/master/examples/complete-example/cafe-ingress.yaml)
 
 - pros:
 	- easy to use and deploy
@@ -118,7 +116,7 @@ spec:
         backend:
           serviceName: ws-svc
           servicePort: 8008
-```    
+```
 - NGINX customization
 - using ingress or configMap (all ingresses)
 
@@ -142,7 +140,7 @@ metadata:
     nginx.org/client-max-body-size: "4m"
 ```
 
-[details](https://github.com/nginxinc/kubernetes-ingress/tree/master/examples/customization) 
+[details](https://github.com/nginxinc/kubernetes-ingress/tree/master/examples/customization)
 
 ## Advanced load balancing
 - advanced algorithms
@@ -167,5 +165,5 @@ metadata:
 	- set upstream to kube dns name to be resolved using kube-dns
 	- see video 24.30 for example config
 
- 
+
 [source](https://www.youtube.com/watch?v=L7JZdyJ8qJQ&t=608s)

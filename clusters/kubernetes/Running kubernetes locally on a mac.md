@@ -1,7 +1,5 @@
 # Running kubernetes locally on a mac
 
-{:.no_toc}
-
 <h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
@@ -19,7 +17,7 @@ chmod +x /usr/bin/kubectl`
 
 - To start the cluster run
 `minikube start`
-- Set kubectl to use the minikube context 
+- Set kubectl to use the minikube context
 `kubectl config use-context minikube`
 - Make sure the cluster is running `kubectl get pods --all-namespaces`. It should output something like
 
@@ -36,7 +34,7 @@ kube-system   kubernetes-dashboard-r2yz2     1/1       Running   0          1m
 - list the nodes `kubectl get nodes`
 - since minikube runs docker we can connect to its docker daemon and view the running containers
 `eval $(minikube docker-env) && docker ps`
-should output something like 
+should output something like
 
 ```
 docker ps
