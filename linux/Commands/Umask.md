@@ -1,5 +1,12 @@
 # Umask
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 - controls file creation mode
 - value is subtracted from 0777 file mode. Ex 0222 -> 755
 - **NOTE: linux files cannot be created with execution permission**

@@ -7,6 +7,13 @@
 {:toc}
 
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 ## Swarm mode
 - `docker swarm init`
 	- creates docker swarm manager
@@ -19,7 +26,7 @@
 - `docker service create --name redis --network mynet redis:latest`
 	- dns based service discovery
 
-- ![services](../pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-17-38.png)
+- ![services](../../pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-17-38.png)
 - general scheduler that in the future will support more like setting up vm
 - 
 
@@ -49,8 +56,8 @@
 - backwards compatible
 
 ## Routing mesh
-- ![routing mesh](../pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-25-21.png)
-- ![routing mesh](../pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-29-24.png)
+- ![routing mesh](../../pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-25-21.png)
+- ![routing mesh](../../pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-29-24.png)
 - - `docker service create --replicas 3 --name frontend --network mynet --publish 80:80/tcp frontend_image:latest`
 - operator reserves a swarm wide ingress port (80) for myapp
 - every node listens on 80
@@ -93,7 +100,7 @@
 		- takes work and reports back the status
 - each node starts the same
 	- roles are dynamic
-- ![layers](../pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-38-44.png)
+- ![layers](../../pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-38-44.png)
 
 #### Quorum Layer
 - manager layer
@@ -109,4 +116,4 @@
 
 #### Node breakdown
 
-![node breakdown](../pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-46-40.png)
+![node breakdown](../../pictures/What's New in Docker - Docker Track - YouTube 2016-07-26 21-46-40.png)

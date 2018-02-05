@@ -1,5 +1,12 @@
 # 57 Sockets: Unix Domain
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 - `bind` bind socket to file system
 - unix socket file can’t be opened using `open()`
 - usually bind to /tmp

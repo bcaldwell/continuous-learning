@@ -1,11 +1,18 @@
 # OSI Model (network layers)
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 
 - main idea of networks is communication between systems
 - OSI: open system interconnection
 - logical model on how network systems are supposed to communicate with each other
 
-![7 network layers](../pictures/network-layers.png)
+![7 network layers](../../pictures/network-layers.png)
 
 - dotted lines represent communication protocols
 

@@ -1,4 +1,11 @@
 # DNS
+
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 - a hierarchical, distributed database with delegated authority
 	- everyone normally manages their own
 - Benefits
@@ -20,7 +27,7 @@
 - recursive name server: will traverse the hierarchical name space to resolve the query
 
 ## DNS mapping example
-![](pictures/dns_resolver.png)
+![](../pictures/dns_resolver.png)
 
 - happens quickly, but we can see the need for caching
 - caching is done as close to the user as possible

@@ -1,4 +1,11 @@
 # 58 Sockets: Fundamentals of TCP/IP Networks
+
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 - TCP: Transmission control protocol
 	- a layered network protocol
 	- Network interface hardware -> IP -> TCP -> Application

@@ -1,5 +1,12 @@
 # TCP/IP and Subnet Masking
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 - TCP/IP v4 != TCP/IP v6
 
 ## TCP/IP overview
@@ -25,7 +32,7 @@
 	- process by which client information sends information to server computer
 	- all information is divided into packets which are sent to the computer receiving the data
 		- send packets in groups which get progressively bigger
-		- ![tcp windowing](../pictures/windowing.gif)
+		- ![tcp windowing](../../pictures/windowing.gif)
 		- if package gets missed, Host 1 will start from the beginning and send 1 packet again and repeat
 	- **important** can be a real pain for real time communications
 - on OSI layer 5 (transport layer)
@@ -94,7 +101,7 @@
 	- count how many bits that you need for each part:
 		- 1 represents subnets part
 		- 0 represents hosts part
-	- ![subnet](../pictures/subnet.png)
+	- ![subnet](../../pictures/subnet.png)
 
 
 [source](https://www.youtube.com/watch?v=EkNq4TrHP_U)

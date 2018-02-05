@@ -1,4 +1,11 @@
 # Linux Performance Tools
+
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 ~ Velocity Brendan Gregg
 
 
@@ -248,7 +255,7 @@
 - example: lab 4
 
 - perf_events: workflow
-- ![](./pictures/perf_events_workflow.png)
+- ![](.././pictures/perf_events_workflow.png)
 - perf_events gotchas
 	- stack traces and symbols often dont work
 - perf_events Counters

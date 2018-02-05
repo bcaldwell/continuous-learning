@@ -1,5 +1,12 @@
 # Kubernetes
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 <h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
@@ -25,7 +32,7 @@
 - goal is to provide a decoupling between the cluster ops and the layers of the stack
 
 ## Kubernetes Architecture
-![](../pictures/kubernetes-arch.png)
+![](../../pictures/kubernetes-arch.png)
 
 - api server is stateless
 - etcd provides the storage for configurations
@@ -35,7 +42,7 @@
 	- controller manager
 
 ### Pods
-![](../pictures/kubernetes-pods.png)
+![](../../pictures/kubernetes-pods.png)
 
 1. Collection of one or more containers that work well together
 2. Volumes that are data volumes. Life span is independent of the container lifespan

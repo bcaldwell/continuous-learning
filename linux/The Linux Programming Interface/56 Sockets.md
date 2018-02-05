@@ -1,5 +1,12 @@
 # 56 Sockets
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 - sockets are for communication:
 	- each application creates a socket
 	- the server binds its socket to a well-known address (name) that clients can locate
@@ -38,8 +45,8 @@
 - read and write for socket -> `send()`, `recv()`
 - `close()` close socket
 
-![](pictures/socket_sys_call_overview.png)
-![](pictures/passive_socket_sys_call_overview.png)
+![](../pictures/socket_sys_call_overview.png)
+![](../pictures/passive_socket_sys_call_overview.png)
 
 ### Datagram sockets
 

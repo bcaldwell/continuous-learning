@@ -1,5 +1,12 @@
 # Gitlab ci ssh keys
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 Unlike in circleci where you can change the deploy keys used to checkout the repo, in gitlab we must inject our own ssh key.
 
 ## Why

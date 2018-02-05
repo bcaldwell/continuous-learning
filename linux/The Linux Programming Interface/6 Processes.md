@@ -1,5 +1,12 @@
 # 6 Processes
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 - every process has a process id and parent id
 	- `pid_t getpid(void);`
 	- `pid_t getppid(void);`

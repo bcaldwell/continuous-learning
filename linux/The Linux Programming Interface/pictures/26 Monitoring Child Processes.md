@@ -1,5 +1,12 @@
 # 26 Monitoring Child Processes
 
+{:.no_toc}
+
+<h2 id="toc-header">Table of Contents <i class="fa fa-chevron-up" aria-hidden="true" id="toc-arrow"></i></h2>
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 ## Waiting
 - `pid_t wait(int *status)`
 	- blocks if previously unwanted child process ha yet to terminate
