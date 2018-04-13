@@ -1,5 +1,8 @@
 # 56 Sockets
+---
 
+
+---
 - sockets are for communication:
 	- each application creates a socket
 	- the server binds its socket to a well-known address (name) that clients can locate
