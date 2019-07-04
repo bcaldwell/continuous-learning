@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+gem 'jekyll', '>= 3.6.3'
 gem 'jekyll-paginate'
 gem 'kramdown'
 gem 'pygments.rb'
 gem 'jekyll-sass-converter'
-gem 'jekyll-redirect-from'
+gem 'jekyll-redirect-from', '>= 0.11.0'
